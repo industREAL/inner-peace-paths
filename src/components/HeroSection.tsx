@@ -32,8 +32,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 animate-hero-gradient" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.p
