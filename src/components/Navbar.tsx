@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@/assets/zugloi-logo.png";
 
 const navLinks = [
   { label: "Főoldal", href: "#hero" },
@@ -21,7 +22,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        <button onClick={() => scrollTo("#hero")} className="font-display text-xl font-semibold tracking-wide text-foreground">
+        <button onClick={() => scrollTo("#hero")} className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-wide text-foreground">
+          <img src={logoImg} alt="Logo" width={36} height={36} className="w-9 h-9" />
           Zuglói Pszichológiai Központ
         </button>
 
