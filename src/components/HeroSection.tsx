@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import heroImg from "@/assets/hero-therapy.jpg";
 
 const HeroSection = () => {
@@ -18,20 +19,25 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background image — Ken Burns zoom + parallax */}
+      {/* Video background with parallax */}
       <div
         className="absolute inset-0"
         style={{ transform: `translateY(${scrollY * 0.35}px)` }}
       >
-        <img
-          src={heroImg}
-          alt="Zuglói Pszichológiai Központ rendelő"
-          width={1920}
-          height={1080}
-          className="w-full h-[120%] object-cover animate-hero-zoom"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroImg}
+          className="w-full h-[120%] object-cover"
+        >
+          <source src={heroVideo.url} type="video/mp4" />
+        </video>
       </div>
 
+      {/* Semi-transparent overlay for text readability */}
+      <div className="absolute inset-0 bg-foreground/50" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.p
