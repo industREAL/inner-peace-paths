@@ -80,11 +80,22 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "hero-zoom": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.15)" },
+        },
+        "hero-gradient": {
+          "0%, 100%": { background: "linear-gradient(135deg, hsl(168 35% 35% / 0.88), hsl(200 30% 30% / 0.82))" },
+          "33%": { background: "linear-gradient(160deg, hsl(180 30% 32% / 0.85), hsl(210 28% 28% / 0.80))" },
+          "66%": { background: "linear-gradient(120deg, hsl(160 32% 38% / 0.86), hsl(195 32% 32% / 0.84))" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
+        "hero-zoom": "hero-zoom 25s ease-in-out infinite alternate",
+        "hero-gradient": "hero-gradient 12s ease-in-out infinite",
       },
     },
   },
