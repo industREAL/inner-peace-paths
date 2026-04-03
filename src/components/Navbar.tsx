@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@/assets/zugloi-logo.png";
 
 const navLinks = [
   { label: "Főoldal", href: "#hero" },

@@ -1,17 +1,39 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-therapy.jpg";
 
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollTo = () => {
     document.querySelector("#szolgaltatasok")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <img src={heroImg} alt="Zuglói Pszichológiai Központ rendelő" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0" style={{ background: "var(--hero-gradient)" }} />
+      {/* Animated background image — Ken Burns zoom + parallax */}
+      <div
+        className="absolute inset-0"
+        style={{ transform: `translateY(${scrollY * 0.35}px)` }}
+      >
+        <img
+          src={heroImg}
+          alt="Zuglói Pszichológiai Központ rendelő"
+          width={1920}
+          height={1080}
+          className="w-full h-[120%] object-cover animate-hero-zoom"
+        />
+      </div>
+
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 animate-hero-gradient" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.p
