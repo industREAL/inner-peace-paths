@@ -82,7 +82,7 @@ export default {
         },
         "hero-zoom": {
           "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(1.15)" },
+          "100%": { transform: "scale(1.25)" },
         },
         "hero-gradient": {
           "0%, 100%": { background: "linear-gradient(135deg, hsl(168 35% 35% / 0.88), hsl(200 30% 30% / 0.82))" },
@@ -94,8 +94,8 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
-        "hero-zoom": "hero-zoom 25s ease-in-out infinite alternate",
-        "hero-gradient": "hero-gradient 12s ease-in-out infinite",
+        "hero-zoom": "hero-zoom 10s ease-in-out infinite alternate",
+        "hero-gradient": "hero-gradient 6s ease-in-out infinite",
       },
     },
   },
