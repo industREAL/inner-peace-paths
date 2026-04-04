@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import heroVideo from "@/assets/hero-video-v2.mp4.asset.json";
+import heroVideo from "@/assets/hero-video-v3.mp4.asset.json";
 import heroImg from "@/assets/hero-therapy.jpg";
 
 const HeroSection = () => {
