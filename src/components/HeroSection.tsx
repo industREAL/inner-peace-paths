@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import heroVideo from "@/assets/hero-video-v4.mp4.asset.json";
 import heroImg from "@/assets/hero-therapy.jpg";
+
+const heroVideo = `${import.meta.env.BASE_URL}hero-video-v4.mp4?v=2`;
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -32,7 +33,7 @@ const HeroSection = () => {
           poster={heroImg}
           className="w-full h-[120%] object-cover"
         >
-          <source src={heroVideo.url} type="video/mp4" />
+          <source src={heroVideo} type="video/mp4" />
         </video>
       </div>
 
