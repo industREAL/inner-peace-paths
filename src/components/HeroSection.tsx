@@ -3,7 +3,7 @@ import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-therapy.jpg";
 
-const heroVideo = `${import.meta.env.BASE_URL}hero-video-v4.mp4?v=2`;
+const heroVideo = `${import.meta.env.BASE_URL}hero-video-v4-loop.mp4?v=3`;
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
