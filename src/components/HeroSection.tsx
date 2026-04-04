@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-therapy.jpg";
-import logoImg from "@/assets/zugloi-logo.png";
+import logoImg from "@/assets/zugloi-logo-white.png";
 
 const heroVideo = `${import.meta.env.BASE_URL}hero-video-v4-loop.mp4?v=3`;
 
